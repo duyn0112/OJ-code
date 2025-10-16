@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char zfc[114];
+    scanf("%s",&zfc);
+    int cd = strlen(zfc),i=0;
+    for(i;i<cd;i++)
+    {
+    	if (zfc[i]>='A'&&zfc[i]<='V')
+    	zfc[i] = zfc[i] + 4;
+    	else if(zfc[i]>='a'&&zfc[i]<='v')
+    	zfc[i] = zfc[i] + 4;
+    	else if(zfc[i]>='w'&&zfc[i]<='z')
+    	zfc[i] = zfc[i] - 22;
+    	else if(zfc[i]>='W'&&zfc[i]<='Z')
+    	zfc[i] = zfc[i] - 22;
+	}
+	printf("%s",zfc);
+}
